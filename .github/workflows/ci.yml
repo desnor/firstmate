@@ -2,7 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    # push makes a fork self-sufficient, and leaves the upstream pull request free to
+    # be a contribution rather than the only place the suites can run.
+    # branches-ignore rather than a branch list so new branches are validated by
+    # default. The one exclusion is no-mistakes/**, where the gate publishes each
+    # run's test evidence (.no-mistakes.yaml): those are orphan branches carrying
+    # evidence and no source tree, so running a source-tree suite against one could
+    # only ever fail.
+    branches-ignore: ['no-mistakes/**']
   pull_request:
     branches: [main]
 

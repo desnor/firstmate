@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+case "$*" in
+  *send-keys*)
+    if (set -o noclobber; : > "On branch main
+nothing to commit, working tree clean
+/var/folders/4r/1kv40vv9641141w4lzxh0k2c0000gp/T//fm-secondmate-harness.pO7Aqa/config-reread-serialized-pushes/first-send.marker") 2>/dev/null; then
+      : > "On branch main
+nothing to commit, working tree clean
+/var/folders/4r/1kv40vv9641141w4lzxh0k2c0000gp/T//fm-secondmate-harness.pO7Aqa/config-reread-serialized-pushes/first-send.entered"
+      sleep 1
+    fi
+    ;;
+esac
+exec "On branch main
+nothing to commit, working tree clean
+/var/folders/4r/1kv40vv9641141w4lzxh0k2c0000gp/T//fm-secondmate-harness.pO7Aqa/config-reread-serialized-pushes/fakebin/tmux.real" "$@"

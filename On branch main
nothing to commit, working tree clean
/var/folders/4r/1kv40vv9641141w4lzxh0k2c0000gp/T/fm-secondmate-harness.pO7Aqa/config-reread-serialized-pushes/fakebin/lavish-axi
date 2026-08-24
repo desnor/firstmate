@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if [ "${1:-}" = --version ]; then
+  printf '%s\n' "${FM_FAKE_LAVISH_AXI_VERSION:-0.1.46}"
+  exit 0
+fi
+exit 0
